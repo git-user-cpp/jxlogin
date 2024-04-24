@@ -45,7 +45,6 @@ public class LoginPage implements ActionListener {
 
         frame.add(userIdLabel);
         frame.add(userPasswordLabel);
-        frame.add(messagLabel);
         frame.add(userIdField);
         frame.add(userPasswordField);
         frame.add(loginButton);
@@ -72,7 +71,7 @@ public class LoginPage implements ActionListener {
                 messagLabel.setText("Login successful");
 
                 frame.dispose();
-                WelcomePage welcomePage = new WelcomePage(userId);
+                new WelcomePage(userId);
             } else {
                 messagLabel.setForeground(Color.red);
                 messagLabel.setText("Wrong login or password");
